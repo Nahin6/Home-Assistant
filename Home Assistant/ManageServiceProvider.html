@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Home Assistant</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/HomeLogo.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <!-- <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    /> -->
+  <!-- <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" /> -->
+
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/style.css" rel="stylesheet" />
+  <style>
+    html,
+    body,
+    .intro {
+        height: 100%;
+    }
+
+    table td,
+    table th {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .card {
+        border-radius: 0.5rem;
+    }
+</style>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="logo">
+        <h1 class="text-light">
+          <!-- <span>Home</span> -->
+          <a href="Admin-index.html"><lord-icon src="https://cdn.lordicon.com/osuxyevn.json" trigger="hover"
+              style="width: 50px; height: 50px">
+            </lord-icon></a>
+        </h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li class="dropdown"><a href="#"><span>Service Providers</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                    <li><a class="nav-link scrollto" href="AddServiceProvider.html">Add Service Provider</a></li>
+                  <li><a href="ManageServiceProvider.html">Manage Service Provider</a></li>
+    
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Customer Care</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                    <li><a href="AddCustomerCareAccount.html">Add Customer Care Account</a></li>
+                  <li><a href="ManageCustomerCare.html">Manage Customer Care Account</a></li>
+    
+                </ul>
+              </li>
+      
+       
+          
+         
+      
+          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="AddNewServices.html">Add New Services</a></li>
+              <li><a href="ManageServices.html">Manage Services</a></li>
+
+            </ul>
+          </li>
+          <!-- <li>
+            <a class="nav-link scrollto" href="FAQ.html">FAQs</a>
+          </li> -->
+        
+            
+        
+          <li><a class="nav-link scrollto getstarted" href="/LoginSignUp/Login.html">Log out</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section class="intro">
+    <div class="bg-image h-100">
+        <div class="mask d-flex align-items-center h-100" style="background-color: #fef8f5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="section-title mt-5" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <h2>Service Provider</h2>
+                        <p>Here are the list of Service Providers</p>
+                        </div>
+                        <div class="card" data-aos="fade-up"
+                        data-aos-delay="200">
+                            <div class="card-body">
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Service Provider Name</th>
+                                            <th scope="col">Service Provider number</th>
+                                            <th scope="col">Service type</th>
+                                            <th scope="col">Service Area</th>
+                                            <th scope="col">Delete Account</th>                                                   
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Karim Hasan</th>
+                                            <td>01771849245</td>
+                                            <td>AC</td>
+                                            <td>Bashundhara R/A</td>                                                   
+                                            <td>
+                                                <a  class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Akash Islam</th>
+                                            <td>01371849245</td>
+                                            <td>TV</td>
+                                            <td>Badda</td>
+                                            <td>
+                                                <a  class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Shuvo sarkar</th>
+                                            <td>01635676234</td>
+                                            <td>Car</td>
+                                            <td>Mirpur</td>                                                
+                                            <td>
+                                                <a  class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Nayem Rahman</th>
+                                            <td>01307110921</td>
+                                            <td>Cleaning</td>
+                                            <td>Khilkhet</td>                                                
+                                            <td>
+                                                <a class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- End Services Section -->
+
+
+    <!-- ======= Contact Us Section ======= -->
+ 
+    <!-- End Contact Us Section -->
+
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <!-- <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Wanna stay updated for latest services?</h4>
+            <p>
+              Enter your email address to subscribe and get notified when new services are available
+            </p>
+            <form action="" method="post">
+              <input type="email" name="email" /><input type="submit" value="Subscribe" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Home Assistant</h3>
+            <p>
+              B block <br />
+              Bashundhara R/A<br />
+              Bangladesh <br /><br />
+              <strong>Phone:</strong> +8801776387693<br />
+              <strong>Email:</strong> nahinislam6@gmail.com<br />
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#">Services</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#">Terms of service</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>More information</h4>
+            <ul>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#services">our services</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#">Customer reviews</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#">Top service providers</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>
+              Follow us in our social networks to get more information and new updates
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Home Assistant Development Team</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+
+        Designed by <a href="">Nahin</a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

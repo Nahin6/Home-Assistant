@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" id="viewport" />
+
+  <title>Home Assistant</title>
+  <meta content="" id="description" />
+  <meta content="" id="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/HomeLogo.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"
+    integrity="sha512-PJqm+yzeTvNZV+PL29wmfZm4hPDd9JGphv7Bk+1Bwq3/3bjAVjNn7Y+YtNdcz7nR9NHy5v0Q+iOaTZwUK1SA0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- MDB -->
+
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <!-- <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    /> -->
+  <!-- <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" /> -->
+
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/style.css" rel="stylesheet" />
+  <!-- <link href="\LoginSignUp\css\style.css" rel="stylesheet" /> -->
+  <style>
+    .error-message {
+      /* margin-top:10px; */
+      color: red;
+      /* text-align: center; */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="logo">
+        <h1 class="text-light">
+          <!-- <span>Home</span> -->
+          <a href="index.html"><lord-icon src="https://cdn.lordicon.com/osuxyevn.json" trigger="hover"
+              style="width: 50px; height: 50px">
+            </lord-icon></a>
+        </h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Dodwadawwn 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li> -->
+          <li><a class="nav-link scrollto" href="AboutUs.html">About us</a></li>
+          <!-- <li>
+            <a class="nav-link scrollto" href="#services">Services</a>
+          </li> -->
+          <!-- <li>
+            <a class="nav-link scrollto" href="RepairRequest.html">Repair request</a>
+          </li> -->
+          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="Allservices.html">Available Services</a></li>
+              <li><a href="RepairRequest.html">Repair request</a></li>
+             
+            </ul>
+          </li>
+          <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
+
+          <!-- <li><a class="nav-link scrollto" href="ContactUs.html">Contact us</a></li> -->
+          <li class="dropdown"><a href="#"><span>Help</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="ContactUs.html">Contact us</a></li>
+              <li><a href="CusCareFeedback.html">View Feedback</a></li>
+             
+            </ul>
+          </li>
+          <li>
+            <a class="nav-link scrollto" href="FAQ.html">FAQs</a>
+          </li>
+          <li>
+            <a class="nav-link scrollto getstarted" href="/LoginSignUp/SignUp.html">Sign Up</a>
+          </li>
+          <li><a class="nav-link scrollto getstarted" href="/LoginSignUp/Login.html">Log In</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <!-- ======= Contact Us Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container mb-5" data-aos="fade-up">
+      <div class="section-title mt-5">
+        <h2>Hire Service Provider</h2>
+        <p>Fill up the information to get connected with a service provider</p>
+      </div>
+      <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch mx-auto" data-aos="fade-up" data-aos-delay="200">
+   
+        <form id="hire-form" role="form" class="php-email-form">
+          <div class="form-group mt-3">
+            <label for="name">Your Area</label>
+            <input type="text" class="form-control subject" id="area" placeholder="ex: Bashundhara R/A">
+            <div class="error-message"></div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-4 form-group">
+              <label for="name">Street/Block Number</label>
+              <input type="text" id="street" class="form-control subject" placeholder="ex: A block, Aziz shorok">
+              <div class="error-message"></div>
+            </div>
+            <div class="col-md-4 form-group">
+              <label for="email">Road Number</label>
+              <input type="text" class="form-control subject" id="road" placeholder="ex: A-12">
+              <div class="error-message"></div>
+            </div>
+            <div class="col-md-4 form-group">
+              <label for="subject">House Number</label>
+              <input type="text" class="form-control subject" id="house" placeholder="ex: 24">
+              <div class="error-message"></div>
+            </div>
+          </div>
+          <div class="form-group mt-3 mt-4">
+            <label for="name">Please select a convenient date for your service appointment.</label>
+            <input type="date" class="form-control mx-auto subject" id="date" placeholder="Subject">
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group mt-3">
+            <label for="name">Please write if any additional information you want to provide to us for better
+              understanding</label>
+            <textarea class="form-control subject" id="message" rows="10" placeholder="Additional information"
+              style="resize:none; height:150px;"></textarea>
+            <div class="error-message"></div>
+          </div>
+          <div class="text-center mt-4">
+            <button type="submit" data-mdb-toggle="modal" data-mdb-target="#solutionModal">Submit</button>
+          </div>
+        </form>
+        <!-- /////////////////////////////// -->
+
+        
+      </div>
+    </div>
+    </div>
+
+  </section>
+  <!-- End Contact Us Section -->
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-newsletter">
+
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>Home Assistant</h3>
+              <p>
+                B block <br />
+                Bashundhara R/A<br />
+                Bangladesh <br /><br />
+                <strong>Phone:</strong> +8801776387693<br />
+                <strong>Email:</strong> nahinislam6@gmail.com<br />
+              </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li>
+                  <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i> <a href="#">Services</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Terms of service</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Privacy policy</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>More information</h4>
+              <ul>
+                <li>
+                  <i class="bx bx-chevron-right"></i> <a href="#services">our services</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Customer reviews</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Top service providers</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Social Networks</h4>
+              <p>
+                Follow us in our social networks to get more information and new updates
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-3">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Home Assistant Development Team</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+
+          Designed by <a href="">Nahin</a>
+        </div>
+      </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+
+  <script>
+
+
+    const form = document.querySelector('form[id="hire-form"]');
+    const errorMessages = document.querySelectorAll('.error-message');
+
+    form.addEventListener('submit', function (e) {
+      let hasError = false;
+      errorMessages.forEach(function (errorMessage) {
+        errorMessage.textContent = '';
+      });
+
+      if (form.area.value === '') {
+        errorMessages[0].textContent = 'Please enter your area';
+        form.area.style.borderColor = 'red';
+        hasError = true;
+      } else {
+        form.area.style.borderColor = '';
+      }
+
+      if (form.street.value === '') {
+        errorMessages[1].textContent = 'Please enter your street/block number';
+        form.street.style.borderColor = 'red';
+        hasError = true;
+      } else {
+        form.street.style.borderColor = '';
+      }
+
+      if (form.road.value === '') {
+        errorMessages[2].textContent = 'Please enter your road number';
+        form.road.style.borderColor = 'red';
+        hasError = true;
+      } else {
+        form.road.style.borderColor = '';
+      }
+
+      if (form.house.value === '') {
+        errorMessages[3].textContent = 'Please enter your house number';
+        form.house.style.borderColor = 'red';
+        hasError = true;
+      } else {
+        form.house.style.borderColor = '';
+      }
+
+      if (form.date.value === '') {
+        errorMessages[4].textContent = 'Please select a date';
+        form.date.style.borderColor = 'red';
+        hasError = true;
+      } else {
+        form.date.style.borderColor = '';
+      }
+      if (form.message.value === '') {
+        errorMessages[5].textContent = 'Please select a date';
+        form.message.style.borderColor = 'red';
+        hasError = true;
+      } else {
+        form.message.style.borderColor = '';
+      }
+
+      if (hasError) {
+        e.preventDefault();
+      } 
+    });
+
+
+
+  </script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha384-/Y6p7I2lGGiJT/6v8MvKpHr/6UXT7Q5i6Y7FgZIz6M9h5oq83aQ5cUpySL25Mn5M"
+    crossorigin="anonymous"></script>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js"
+    integrity="sha512-jfzZV0E9iH28T1u8l/OwDrDyQbhlfOYLk7VYMXL//4F4ZC4X9G3Wq5i5v5p/lxw1HeMj8WUh/OeRvA0X9OZ2Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

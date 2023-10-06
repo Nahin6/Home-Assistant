@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+
+    <!-- Font Icon -->
+    <link href="assets/img/HomeLogo.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link
+      rel="stylesheet"
+      href="fonts/material-icon/css/material-design-iconic-font.min.css"
+    />
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <!-- Sign up form -->
+      <section class="sign-in">
+        <div class="container">
+          <div class="signin-content">
+            <div class="signin-image">
+              <figure>
+                <img src="images/signin-image.jpg" alt="sing up image" />
+              </figure>
+
+              <a href="/LoginSignUp/SignUp.html" class="signup-image-link"
+                >Dont have an account yet?</a
+              >
+            </div>
+
+            <div class="signin-form">
+              <h2 class="form-title">Log in</h2>
+              <form method="POST" class="register-form" id="login-form">
+                <div class="form-group">
+                  <label for="your_name"
+                    ><i  id="name-icon" class="zmdi zmdi-account material-icons-name"></i
+                  ></label>
+                  <input
+                    type="email"
+                    name="your_name"
+                    id="your_name"
+                    placeholder="Your email"
+                  />
+                  <div class="error-message"></div>
+                </div>
+                <div class="form-group">
+                  <label for="your_pass"><i id="name-icon" class="zmdi zmdi-lock"></i></label>
+                  <input
+                    type="password"
+                    name="your_pass"
+                    id="your_pass"
+                    placeholder="Password"
+                  />
+                  <div class="error-message"></div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="checkbox"
+                    name="remember-me"
+                    id="remember-me"
+                    class="agree-term"
+                  />
+                  <label for="remember-me" class="label-agree-term"
+                    ><span><span></span></span>Remember me</label
+                  >
+                </div>
+                <div class="form-group form-button">
+                  <a
+                  
+                    type="submit"
+                    name="signin"
+                    id="signin"
+                    class="form-submit"
+                    value="Log in"
+                    href="/index.html"
+                  > Log in </a>
+                </div>
+              </form>
+              <div class="social-login">
+                <span class="social-label">Or login with</span>
+                <ul class="socials">
+                  <li>
+                    <a href="#"
+                      ><i class="display-flex-center zmdi zmdi-facebook"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="display-flex-center zmdi zmdi-twitter"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="display-flex-center zmdi zmdi-google"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- JS -->
+    <script>
+        const form = document.getElementById('login-form');
+        const nameInput = document.getElementById('your_name');
+        const passwordInput = document.getElementById('your_pass');
+        
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+        
+          const nameValue = nameInput.value.trim();
+          const passwordValue = passwordInput.value.trim();
+        
+          let formIsValid = true;
+        
+          if (nameValue === '') {
+            setErrorFor(nameInput, 'Email cannot be blank');
+            formIsValid = false;
+          } else {
+            setSuccessFor(nameInput);
+          }
+        
+          if (passwordValue === '') {
+            setErrorFor(passwordInput, 'Password cannot be blank');
+            formIsValid = false;
+          } else {
+            setSuccessFor(passwordInput);
+          }
+        
+          if (formIsValid) {
+            form.submit();
+          }
+        });
+        
+        function setErrorFor(input, message) {
+          const formGroup = input.parentElement;
+          const errorMessage = formGroup.querySelector('.error-message');
+          input.classList.add('form-error');
+          errorMessage.innerText = message;
+          formGroup.classList.add('error');
+          const icon = formGroup.querySelector('i');
+          icon.classList.add('form-error');
+        }
+        
+        function setSuccessFor(input) {
+          const formGroup = input.parentElement;
+          const errorMessage = formGroup.querySelector('.error-message');
+          input.classList.remove('form-error');
+          errorMessage.innerText = '';
+          formGroup.classList.remove('error');
+          const icon = formGroup.querySelector('i');
+          icon.classList.remove('form-error');
+        }
+        
+    </script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+  <!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+
+    <!-- Font Icon -->
+     <link href="assets/img/HomeLogo.png" rel="icon" />
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+        <section class="signup">
+          <div class="container">
+            <div class="signup-content">
+              <div class="signup-form">
+                <h2 class="form-title">Sign up</h2>
+                <form method="POST" class="register-form" id="register-form">
+                  <div class="form-group">
+                    <label for="name"
+                      ><i class="zmdi zmdi-account material-icons-name"></i
+                    ></label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Your Name"
+                    />
+                    <div class="error-message"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="name"
+                      ><i class="zmdi zmdi-phone-in-talk material-icons-name"></i
+                    ></label>
+                    <input
+                      type="number"
+                      name="number"
+                      id="number"
+                      placeholder="Your Number"
+                    />
+                    <div class="error-message"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email"><i class="zmdi zmdi-email"></i></label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Your Email"
+                    />
+                    <div class="error-message"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                    <input
+                      type="password"
+                      name="pass"
+                      id="pass"
+                      placeholder="Password"
+                    />
+                    <div class="error-message"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="re-pass"><i id="ired" class="zmdi zmdi-lock-outline"></i></label>
+                    <input
+                      type="password"
+                      name="re_pass"
+                      id="re_pass"
+                      placeholder="Repeat your password"
+                    />
+                    <div class="error-message"></div>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="checkbox"
+                      name="agree-term"
+                      id="agree-term"
+                      class="agree-term"
+                    />
+                    <label for="agree-term" class="label-agree-term"
+                      ><span><span></span></span
+                      >I agree all statements in
+                      <a href="#" class="term-service">Terms of service</a></label
+                    >
+                    <div class="error-message"></div>
+                  </div>
+                  <div class="form-group form-button">
+                    <input
+                      type="submit"
+                      name="signup"
+                      id="signup"
+                      class="form-submit"
+                      value="Register"
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="signup-image">
+                <figure><img src="images/signup-image.jpg" alt="sing up image" /></figure>
+                <a href="/LoginSignUp/Login.html" class="signup-image-link"
+                  >I am already member</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      
+
+    </div>
+<script>
+const form = document.getElementById('register-form');
+const nameInput = document.getElementById('name');
+const numberInput = document.getElementById('number');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('pass');
+const confirmPasswordInput = document.getElementById('re_pass');
+const agreeCheckbox = document.getElementById('agree-term');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const nameValue = nameInput.value.trim();
+  const numberValue = numberInput.value.trim();
+  const emailValue = emailInput.value.trim();
+  const passwordValue = passwordInput.value.trim();
+  const confirmPasswordValue = confirmPasswordInput.value.trim();
+
+  let formIsValid = true;
+
+  if (nameValue === '') {
+    setErrorFor(nameInput, 'Name cannot be blank');
+    formIsValid = false;
+  } else {
+    setSuccessFor(nameInput);
+  }
+  if (numberValue === '') {
+    setErrorFor(numberInput, 'number cannot be blank');
+    formIsValid = false;
+  } else {
+    setSuccessFor(numberInput);
+  }
+
+  if (emailValue === '') {
+    setErrorFor(emailInput, 'Email cannot be blank');
+    formIsValid = false;
+  } else if (!isValidEmail(emailValue)) {
+    setErrorFor(emailInput, 'Email is not valid');
+    formIsValid = false;
+  } else {
+    setSuccessFor(emailInput);
+  }
+
+  if (passwordValue === '') {
+    setErrorFor(passwordInput, 'Password cannot be blank');
+    formIsValid = false;
+  } else {
+    setSuccessFor(passwordInput);
+  }
+
+  if (confirmPasswordValue === '') {
+    setErrorFor(confirmPasswordInput, 'Confirm password cannot be blank');
+    formIsValid = false;
+  } else if (passwordValue !== confirmPasswordValue) {
+    setErrorFor(confirmPasswordInput, 'Passwords do not match');
+    formIsValid = false;
+  } else {
+    setSuccessFor(confirmPasswordInput);
+  }
+
+  if (!agreeCheckbox.checked) {
+    setErrorFor(agreeCheckbox, 'You must agree to the terms of service');
+    formIsValid = false;
+  } else {
+    setSuccessFor(agreeCheckbox);
+  }
+
+  if (formIsValid) {
+    form.submit();
+  }
+});
+
+function setErrorFor(input, message) {
+  const formGroup = input.parentElement;
+  const errorMessage = formGroup.querySelector('.error-message');
+  input.classList.add('form-error');
+  errorMessage.innerText = message;
+  formGroup.classList.add('error');
+}
+
+function setSuccessFor(input) {
+  const formGroup = input.parentElement;
+  const errorMessage = formGroup.querySelector('.error-message');
+  input.classList.remove('form-error');
+  errorMessage.innerText = '';
+  formGroup.classList.remove('error');
+}
+
+function isValidEmail(email) {
+  // A simple email validation function, you can replace this with a more complex one
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+</script>
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
